@@ -1,0 +1,23 @@
+name: docs
+
+on:
+  push:
+  workflow_dispatch:
+  
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+      - name: Install pipenv
+        run: python -m pip install --upgrade pipenv wheel
+      - name: Instal dependencies
+        run: pipenv install
+      - run: git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Publish docs
+        run: pipenv run mkdocs gh-deploy
