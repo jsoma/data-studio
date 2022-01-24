@@ -1,9 +1,7 @@
 # Building graphs and charts
 
-## Simple graphs
-
-
-https://www.python-graph-gallery.com/
-
-https://pythonplot.com/
+* [DataWrapper](https://www.datawrapper.de/)
+* [Plotnine reference](https://jsoma.github.io/plotnine-reference)
+* https://www.python-graph-gallery.com/
+* https://pythonplot.com/
 

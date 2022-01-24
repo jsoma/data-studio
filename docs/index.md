@@ -4,8 +4,6 @@ Working with and presenting data isn't about going through a nice orderly to-do 
 
 You ask about how to do something, I tell you how to do it (or provide links).
 
+## How do I use this site?
 
-## Building a portfolio
-
-* [Plotnine reference](https://jsoma.github.io/plotnine-reference)
-* [Fancy GitHub](https://jonathansoma.com/fancy-github/)
+Look up! As you work your way through it, you might need a portfolio. [Fancy GitHub](https://jonathansoma.com/fancy-github/) can help with that!
