@@ -1,0 +1,9 @@
+div.jp-InputPrompt,
+div.jp-OutputPrompt {
+    display:none !important;
+}
+
+
+.md-typeset table:not([class]) th {
+    text-align: center !important;
+}

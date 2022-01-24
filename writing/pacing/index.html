@@ -1,0 +1,924 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
+    
+    
+      
+        <title>Managing risk - Data Studio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bdf02c5.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f48eb1a4.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-5541738-17","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#managing-risk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Data Studio" class="md-header__button md-logo" aria-label="Data Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Studio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Managing risk
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jsoma/data-studio/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jsoma/data-studio
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Writing/Stories
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../data/" class="md-tabs__link">
+      Data
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../graphs/" class="md-tabs__link">
+        Graphs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../maps/" class="md-tabs__link">
+      Maps
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../sites/" class="md-tabs__link">
+      Pages
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../apps/" class="md-tabs__link">
+      Apps
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../examples/" class="md-tabs__link">
+      How They Did It
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Data Studio" class="md-nav__button md-logo" aria-label="Data Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Data Studio
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jsoma/data-studio/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jsoma/data-studio
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Writing/Stories
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Writing/Stories" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Writing/Stories
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Writing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideas/" class="md-nav__link">
+        Generating ideas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Managing risk
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Managing risk
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-goal" class="md-nav__link">
+    The goal
+  </a>
+  
+    <nav class="md-nav" aria-label="The goal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-make-things-work" class="md-nav__link">
+    How to make things work
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-value-and-reward" class="md-nav__link">
+    Risk, value, and reward
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planning-ahead" class="md-nav__link">
+    Planning ahead
+  </a>
+  
+    <nav class="md-nav" aria-label="Planning ahead">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimum-viable-story" class="md-nav__link">
+    Minimum viable story
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-analysis" class="md-nav__link">
+    Risk analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acknowledge-your-weaknesses" class="md-nav__link">
+    Acknowledge your weaknesses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reducing-risk" class="md-nav__link">
+    Reducing risk
+  </a>
+  
+    <nav class="md-nav" aria-label="Reducing risk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blockers-and-points-of-failure" class="md-nav__link">
+    Blockers and points of failure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-in-data-sources" class="md-nav__link">
+    Risk in data sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-in-analysis" class="md-nav__link">
+    Risk in analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-in-visualization" class="md-nav__link">
+    Risk in visualization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-formats/" class="md-nav__link">
+        File formats
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/" class="md-nav__link">
+        Data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Graphs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Graphs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Graphs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphs/" class="md-nav__link">
+        Building graphs and charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graphs/plotnine-flipbook/" class="md-nav__link">
+        Plotnine flipbook
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/" class="md-nav__link">
+        Maps
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sites/" class="md-nav__link">
+        Pages
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apps/" class="md-nav__link">
+        Apps
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        How They Did It
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+
+
+
+                
+<a href="https://github.com/jsoma/data-studio/edit/master/docs/writing/pacing.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="managing-risk">Managing risk<a class="headerlink" href="#managing-risk" title="Permanent link">&para;</a></h1>
+<p>Everything you need to know about successfully executing a data journalism project can be found in <a href="https://www.youtube.com/watch?v=e_qc0IE3cTw">this video about bathroom renovations</a>.</p>
+<h2 id="the-goal">The goal<a class="headerlink" href="#the-goal" title="Permanent link">&para;</a></h2>
+<p>In my opinion, <strong>an unfinished project is worse than no project at all.</strong></p>
+<p>Yes, working through a project always teaches you skills. I have approximately one million unfinished, unpublished projects sitting on my computer that will never see the light of day. I'm sure I learned a lot with all of them, and I'm better off for having started them. <em>But every one of them is a terrible weight on my mind.</em></p>
+<p>One of the biggest problems with unfinished projects is they aren't <em>emotionally fulfilling</em>. Even if you learned a lot, these projects can feel like lost time, weighing you down with an odd form of productivity guilt. Did you <em>really</em> accomplish something during all those days/hours/weeks you spent on it? Whatever you can do to get it across the finish line – even if you don't like the final product – is going to feel better in the long run.</p>
+<p>In a more practical sense, it's also easier to talk to someone about your skillsset when you can point to projects that used those skills. Even if you give sixteen qualifiers about how dissatisfied you are with a particular project, it's better than "I have a project where I worked on something like that, I just never published it..."</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>At the end of last semester I published the <a href="https://jsoma.github.io/pandas-question-factory/">pandas question factory</a>, a little tool that provides practice questions when doing data analysis with pandas. Even though I feel it has potential, <em>I hate it.</em></p>
+<p>It has about ten thousand improvements that I think are mandatory before it ascends from being Complete Garbage, but I pushed it out anyway. I have no idea if I'll ever make those improvements, and it's at least functional!</p>
+</div>
+<h3 id="how-to-make-things-work">How to make things work<a class="headerlink" href="#how-to-make-things-work" title="Permanent link">&para;</a></h3>
+<p>It's one thing when you're knee-deep in a project that isn't going well. Depending on your timeframe, you have a few options:</p>
+<ul>
+<li>Pivot, pivot, pivot, pivot, until you find a thread that's worth pursuing.</li>
+<li>Simplify, simplify, simplify until you have nine words and a bar chart.</li>
+<li>Quit. But let's take that off the table for now!</li>
+</ul>
+<p>Everything else on this page is aimed at preventing you from ending up in one of those bad situations.</p>
+<div class="admonition tip">
+<p class="admonition-title">But what if in the end my project is garbage?</p>
+<p>If it's a personal project, who honestly cares? Just publish the garbage. Something is better than nothing.</p>
+<p>Slap it on a web page, publish your github repo – <a href="https://jonathansoma.com/fancy-github/">hot tips on that here</a> – and never think about it again. Don't highlight its existence, but <em>put it out there</em>.</p>
+</div>
+<h3 id="risk-value-and-reward">Risk, value, and reward<a class="headerlink" href="#risk-value-and-reward" title="Permanent link">&para;</a></h3>
+<p>During the planning stages of your project, you have to ask yourself two questions:</p>
+<ul>
+<li>Do I have the time to get the job done?</li>
+<li>Do I have the ability to get the job done? </li>
+</ul>
+<p>The more complicated a project is, the longer it will take. The lower your skill level, the longer a project will take. If you pick a complicated project where you'll need to learn a lot along the way, <strong>you need to budget a long, long time.</strong></p>
+<p>On the other hand, sometimes a giant project is absolutely worth it. You'll learn skills that you can't pick up in a short period of time, or you'll win all of those journalism awards you've always had your eye on.</p>
+<p>It's perfectly fine to head down that long road, <em>as long as you've made a plan and are aware of what's in store.</em> You don't want to charge head-first into a beautiful, rewarding project and realize you only have a fraction of the time you'll need to complete it.</p>
+<h2 id="planning-ahead">Planning ahead<a class="headerlink" href="#planning-ahead" title="Permanent link">&para;</a></h2>
+<p>There are a handful of things you can do to improve your chances of completing a quality project by the deadline and reducing stress along the way. Let's take a look at a few ideas that involve a tiny, tiny bit of planning ahead.</p>
+<h3 id="minimum-viable-story">Minimum viable story<a class="headerlink" href="#minimum-viable-story" title="Permanent link">&para;</a></h3>
+<p>At the start of a project it's useful to define a <strong>minimum viable story</strong> - the smallest, tiniest story that our work could produce. Yes, we'd love to make every project a shining, gorgeous, completely perfect piece of art. In reality, though, we have limited skills and limited time.</p>
+<p>Our minimum viable story is without a doubt far more boring than we'd like it to be, with fewer interviews, less depth, and uninteresting graphics. But it helps keep us grounded, and if we hit a wall we can be comforted that there's still <em>something</em> we can produce, even if it isn't our best work.</p>
+<p>To our editors it's a guarantee we'll have something to turn it at the deadline, and to us it's emotional insurance that unexpected issues aren't the end of the world.</p>
+<h3 id="risk-analysis">Risk analysis<a class="headerlink" href="#risk-analysis" title="Permanent link">&para;</a></h3>
+<p>At the start of a project, we can break it down into several stages and assign a risk level to each. Our scoring might look something like this:</p>
+<table>
+<thead>
+<tr>
+<th>step</th>
+<th>tools</th>
+<th>new topics</th>
+<th>risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data collection</strong></td>
+<td>Selenium, pandas</td>
+<td>multi-page scraping</td>
+<td>medium risk</td>
+</tr>
+<tr>
+<td><strong>Analysis</strong></td>
+<td>pandas</td>
+<td>none</td>
+<td>low risk</td>
+</tr>
+<tr>
+<td><strong>Visualization</strong></td>
+<td>DataWrapper</td>
+<td>stacked charts, annotations</td>
+<td>low risk</td>
+</tr>
+</tbody>
+</table>
+<p>After breaking it down, we can see that overall there isn't too much risk involved: it seems like a doable project. Even if our data collection takes longer than predicted, the rest of the project doesn't have many moving parts and will most likely go smoothly.</p>
+<p>If we change our analysis stage to include text mining and our visualization to be based on D3, we might end up with two "high risk" rows! If our deadline is in two weeks, that's a signal to reevaluate our plan. If we have a couple months, though, we can use the extra time to cover for our still-growing skillset.</p>
+<h3 id="acknowledge-your-weaknesses">Acknowledge your weaknesses<a class="headerlink" href="#acknowledge-your-weaknesses" title="Permanent link">&para;</a></h3>
+<p>When you write a pitch, it's easy to ignore all of the gotchas and potential problems you might encounter down the line. Chances are you'll focus on what you're good at!</p>
+<p>While focusing on your strengths is certainly <em>important</em> – especially for getting a pitch accepted – it isn't necessarily <em>helpful</em> when those problems rear their head. Instead, treat a pitch like a planning document: acknowledge that you might hit a stumbling block with a section of the project and show you plan for coping with them ahead of time.</p>
+<p>For example, if I'm doing a piece about gerrymandering and I know I'm not great at mapping with GIS software, my pitch might have a lot of space dedicated to how great my interviews are going to me. It might distract the editor, but that's just ignoring the problem.</p>
+<p>Instead, I can mention that if a "real" map doesn't work out I can use Illustrator to trace the images released by the political boundaries task force.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Okay, so maybe cold-pitching someone you've never worked with before and explaining how awful you are at one thing or another isn't a great idea! But for internal pitches, class pitches, etc etc, this shows that you've really thought things through, and gives you a roadmap for when issues come up.</p>
+</div>
+<h2 id="reducing-risk">Reducing risk<a class="headerlink" href="#reducing-risk" title="Permanent link">&para;</a></h2>
+<h3 id="blockers-and-points-of-failure">Blockers and points of failure<a class="headerlink" href="#blockers-and-points-of-failure" title="Permanent link">&para;</a></h3>
+<p>When you're working on a project, things will always end up going wrong! The ones to watch out for are <strong>blockers</strong> or <strong>single points of failure</strong>. These are situations that you get into where you can't move forward until the problem is resolved. Depending on what your project is, some examples might be:</p>
+<ul>
+<li>Scraper gets blocked or isn't possible</li>
+<li>FOIA request isn't fulfilled</li>
+<li>Can't figure out how to make X chart</li>
+<li>Your one dataset isn't interesting</li>
+</ul>
+<p>The more potential for blockers, the more risk, the more of a chance your story won't get done. It's important to structure your story in a way that if one or two parts fall apart, the rest of the story doesn't go with it.</p>
+<p>The easiest way to protect yourself is by having complementary approaches and resources at hand. Multiple datasets, multiple sources, multiple visuals. It might be a little more effort to plan up front, but it's a lot more comfortable than staring at your screen for sixteen hours because a Python script won't do what you're asking it to!</p>
+<h3 id="risk-in-data-sources">Risk in data sources<a class="headerlink" href="#risk-in-data-sources" title="Permanent link">&para;</a></h3>
+<p>All data sources have the potential to increase risk! But custom-made datasets are some of the more difficult ones.</p>
+<ol>
+<li><strong>FOI requests</strong> might take months to obtain or never be granted at all</li>
+<li><strong>Large text datasets</strong> can be difficult to parse and process</li>
+<li><strong>Scrapers</strong> have a tendency to get blocked, break, or miss edge cases</li>
+<li><strong>Hand-entered records</strong> typically require a lot of cleaning</li>
+</ol>
+<p>To reduce risk with your big fancy data source, <strong>always have alternative, simpler datasets within arm's reach</strong>. It's good to have some spreadsheets or CSVs that you can rely on if the other parts don't work out.</p>
+<div class="admonition info">
+<p class="admonition-title">What if the dataset <em>is</em> my story?</p>
+<p>You should almost never rely on a single dataset as the sole reason your story exists. With rare exceptions stories exist because of <em>ideas</em>, not because of data. There's always some way to push your story in another direction, expand it a little, cover something slightly tangential – anything to make you less dependent on that one source.</p>
+<p>And if your original data source works out? Congratulations, you can use the secondary one(s) to make your story deeper and more interesting!</p>
+</div>
+<h3 id="risk-in-analysis">Risk in analysis<a class="headerlink" href="#risk-in-analysis" title="Permanent link">&para;</a></h3>
+<p>The biggest risk in your data analysis is spending a lot of time <em>looking</em> at it but not asking it any <em>questions</em>. </p>
+<p>Let's be honest: I hate exploratory data analysis. To me, EDA is the idea that if you just poke around at a dataset long enough you'll find a story inside of it. I don't find that to be true! Instead you burn a lot of time looking at histograms and averages without aksing yourself <em>why</em> they might be interesting.</p>
+<p>To reduce risk when heading into the analyis step, be sure you have a <strong>clear goal going into your analysis.</strong></p>
+<p>Personally, I like to write headline templates about what I'm looking for. For example:</p>
+<ul>
+<li>Rent dropped ____% during first wave of pandemic</li>
+<li>Trash collection complaints spiked to _____ during sanitation workers' protest regarding vaccine mandate</li>
+<li>As workers return to the office, animals are being returned to shelters at ____ times the normal rate </li>
+</ul>
+<p>Now all you need to do is fill in the blanks! And note that it doesn't matter if the data doesn't support the fill-in-the-blanks headline: it's just an exercise to direct our analysis.</p>
+<p>As another similar option, I've heard of other people brainstorming based on the tweet that their story would get.</p>
+<div class="admonition tip">
+<p class="admonition-title">Make sure it's measureable</p>
+<p>I was recently talking to a student who wanted to compare right-wing politicians' content on Twitter compared to Parler. While getting the data might provide its own stumbling block, what do we <em>mean</em> by comparison?</p>
+<p>You might want to compare how provocative they are, or how angry, or how much spin they put on events. <em>But how do you measure any of those?</em> Calculating the time of day they tweet or counting how many posts mention the word "taxes" are all simple and easy to measure. You can't measure provocativeness in the same way, though, as it's not something specific and countable.</p>
+<p>Yes, <a href="https://investigate.ai/investigating-sentiment-analysis/comparing-sentiment-analysis-tools/">sentiment analysis exists</a> and there are <a href="https://www.nytimes.com/interactive/2017/02/28/upshot/trump-sounds-different-tone-in-first-address-to-congress.html">more nuanced approaches</a>, but make sure you know exactly what you're measuring and how you're doing it before you end up going down a rabbit hole.</p>
+</div>
+<h3 id="risk-in-visualization">Risk in visualization<a class="headerlink" href="#risk-in-visualization" title="Permanent link">&para;</a></h3>
+<p>To reduce risk with your data visualization, <strong>get into the practice of iterating.</strong></p>
+<p>Instead of attempting to build the fancy, magic, perfect visualization all at once, start with something simpler and build it up piece by piece. That way if you hit a wall (or a deadline!) you still have something you can use.</p>
+<p>A simple way to do this is start with a basic bar chart or scatterplot. No highlights, no annotations, no nothing. Use whatever you're most comfortable with: Datawrapper, pandas, ggplot, anything is fine.</p>
+
+              
+
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../ideas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Generating ideas" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Generating ideas
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../file-formats/" class="md-footer__link md-footer__link--next" aria-label="Next: File formats" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              File formats
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Jonathan Soma
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.61edd562.min.js"></script>
+      
+    
+  </body>
+</html>
