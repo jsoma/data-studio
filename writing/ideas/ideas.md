@@ -34,3 +34,11 @@ Many times the rows of your dataset can be put into groups, and then the groups 
     * If you have crimes in various cities, you can count the crimes in each city
     * If you have people with job titles, you can calculate median salary for each job title
     * If you have power plants with energy sources, you can sum the total CO2 produced by each energy source
+
+## Interview an expert
+
+This one is either way more difficult or way less difficult than actually analyzing data, depending on where you're coming from.
+
+For any concept or dataset you want to work with, there's probably someone who deals with it _all the time_. Whether it's their profession or a hardcore hobby, talking to them can provide insight and ideas that you'd never be able to come up with on your own. Think of it as interviewing a beat reporter who never writes stories!
+
+If you don't have a specific topic or dataset in mind, sometimes this is as easy as talking to a friend who is passionate about a topic. They'll be happy to chatter on and on about the topic, and eventually you'll hit a "huh, that's interesting!" moment that you can spin into a story.
