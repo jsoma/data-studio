@@ -11,6 +11,9 @@ nav:
     - writing/pacing.md
     - File formats: writing/file-formats.md
   - Data: data.md
+    - reshaping/long-to-wide.ipynb
+    - reshaping/wide-to-long.ipynb
+    - reshaping/transposing-data.ipynb
   - Graphs:
     - graphs.md
     - Plotnine flipbook: graphs/plotnine-flipbook.ipynb
