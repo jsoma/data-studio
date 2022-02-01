@@ -53,7 +53,7 @@ Note that the CSS rules are about background size and position, while the actual
 
 !!! danger "missing images"
 
-When you use `background-image`, it always looks for the image in the same place you have the style. So if you moved it into the stylesheet, it would look for the image in the same directory as the stylesheet, *even if it's not in the same folder as `index.html`.
+    When you use `background-image`, it always looks for the image in the same place you have the style. So if you moved it into the stylesheet, it would look for the image in the same directory as the stylesheet, *even if it's not in the same folder as `index.html`.
 
 ## Chart titles, subtitles, captions
 
