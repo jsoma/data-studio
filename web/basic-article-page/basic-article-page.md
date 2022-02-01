@@ -6,16 +6,21 @@ While the examples on this page have the styles and html next to one another, th
 
 If you're using a CSS template you might get this automatically as part of the template. If not, the code below will create a 760px column in the middle of the page for your text. As a bonus, images inside of the text container will never grow outside of it, even if they're huge.
 
+**CSS**
+
+```css
+.text-container {
+    max-width: 760px;
+    margin: 0 auto;
+}
+.text-container img {
+    max-width: 100%;
+}
+```
+
+**HTML**
+
 ```html
-<style>
-    .text-container {
-        max-width: 760px;
-        margin: 0 auto;
-    }
-    .text-container img {
-        max-width: 100%;
-    }
-</style>
 <div class='text-container'>
     <p>Here is some long text</p>
     <img src="sample.jpg">
@@ -29,18 +34,23 @@ Using background images is a great way to stack text on top of images, and is a 
 
 Note that the CSS rules are about background size and position, while the actual image is specified inline, as `style='background-image: url("bg.jpg");'`. This allows you to use the `full-bleed-image` class anywhere, and each time specify the image you're like as the background.
 
-```html
-<style>
-    .full-bleed-image {
-        background-size: cover;
-        background-position: center center;
-    }
+**CSS**
 
-    .full-bleed-image .image-text {
-        color: white;
-        text-shadow: 0 0 20px black;
-    }
-</style>
+```css
+.full-bleed-image {
+    background-size: cover;
+    background-position: center center;
+}
+
+.full-bleed-image .image-text {
+    color: white;
+    text-shadow: 0 0 20px black;
+}
+```
+
+**HTML**
+
+```html
 <div class='full-bleed-image' style='background-image: url("bg.jpg")'>
     <div class='text-container'>
         <div class='image-text'>Here is some text</div>
@@ -61,20 +71,25 @@ Positioning your chart in a special `div` allows you to style a header, subhead 
 
 Be sure to add an `alt` tag for screen readers and general accessibility! Even if you have a descriptive subtitle you'll still need to do this.
 
+**CSS**
+
+```css
+.chart-holder h3 {
+    font-weight: bold;
+}
+.chart-holder .subtitle {
+    font-size: 1.2em;
+}
+.chart-holder .caption {
+    font-size: 0.9;
+    color: grey;
+    text-align: right;
+}
+```
+
+**HTML**
+
 ```html
-<style>
-    .chart-holder h3 {
-        font-weight: bold;
-    }
-    .chart-holder .subtitle {
-        font-size: 1.2em;
-    }
-    .chart-holder .caption {
-        font-size: 0.9;
-        color: grey;
-        text-align: right;
-    }
-</style>
 <div class='text-container'>
     <p>Here is some long text</p>
     <div class='chart-holder'>
