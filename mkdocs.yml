@@ -17,7 +17,11 @@ nav:
     - graphs.md
     - Plotnine flipbook: graphs/plotnine-flipbook.ipynb
   - Maps: maps.md
-  - Pages: sites.md
+  - Pages:
+    - sites.md
+    - web/basic-article-page.md
+    - web/linking-between-folders.md
+    - web/organizing-styles-and-stylesheets.md
   - Apps: apps.md
   - How They Did It: examples.md
 extra_css:
