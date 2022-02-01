@@ -22,7 +22,11 @@ Maybe you're on the front page of **example.com** and want to link into a story 
 <a href="curry-rice">A story about curry rice</a>
 ```
 
-> Note that if you're already at  **example.com/curry-rice**, though, it will send you to  **example.com/curry-rice/curry-rice**.
+When you don't include an `https://...` or a `/` at the front of your `href=`, it just adds it on to the existing URL.
+
+!!! danger
+
+    Note that if you're already at  **example.com/curry-rice**, though, it will send you to  **example.com/curry-rice/curry-rice**.
 
 ## Going "up" a folder
 
