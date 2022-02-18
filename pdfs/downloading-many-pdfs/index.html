@@ -13,7 +13,7 @@
     
     
       
-        <title>Here is some text - Data Studio</title>
+        <title>Downloading many PDFs - Data Studio</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#here-is-some-text" class="md-skip">
+        <a href="#downloading-a-lot-of-pdfs" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Here is some text
+              Downloading many PDFs
             
           </span>
         </div>
@@ -166,13 +166,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../reshaping/long-to-wide/" class="md-tabs__link">
+      <a href="../../reshaping/long-to-wide/" class="md-tabs__link md-tabs__link--active">
         Data
       </a>
     </li>
@@ -404,12 +406,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -482,11 +486,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../pdfs/downloading-many-pdfs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Downloading many PDFs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Downloading many PDFs
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-a-list-of-files" class="md-nav__link">
+    Downloading a list of files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-list-of-files-from-a-dataframe" class="md-nav__link">
+    Creating a list of files from a dataframe
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -726,12 +778,55 @@
 
 
                 
-<a href="https://github.com/jsoma/data-studio/edit/master/docs/using-ai2html/ai2html.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/jsoma/data-studio/edit/master/docs/pdfs/downloading-many-pdfs.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="here-is-some-text">Here is some text<a class="headerlink" href="#here-is-some-text" title="Permanent link">&para;</a></h1>
+<h1 id="downloading-a-lot-of-pdfs">Downloading a lot of PDFs<a class="headerlink" href="#downloading-a-lot-of-pdfs" title="Permanent link">&para;</a></h1>
+<p>Sometimes you'll have a big list of PDFs that you want to download. Maybe you'll eventually run them through Tika or tesseract or something, but for now: we need to download them!</p>
+<h2 id="downloading-a-list-of-files">Downloading a list of files<a class="headerlink" href="#downloading-a-list-of-files" title="Permanent link">&para;</a></h2>
+<p>The best way to download a list of files is using <code>wget</code>. You can install <code>wget</code> on OS X with <code>brew install wget</code>, and on Windows I think <a href="https://www.jcchouinard.com/wget/#Download_Wget_on_Windows">this is the best option</a>.</p>
+<p>After it's installed, make sure you have a file formatted with <strong>one complete URL on each line</strong>, like below.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://www.example.com/file-1.pdf
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>https://www.example.com/file-2.pdf
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>https://www.example.com/file-3.pdf
+</code></pre></div>
+<p>Then you can use the <code>wget</code> command to download each one of the files.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wget -i urls.txt
+</code></pre></div>
+<h2 id="creating-a-list-of-files-from-a-dataframe">Creating a list of files from a dataframe<a class="headerlink" href="#creating-a-list-of-files-from-a-dataframe" title="Permanent link">&para;</a></h2>
+<p>Maybe you have a dataframe where one of the columns is your URL.</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>code</th>
+<th>url</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABC</td>
+<td>123</td>
+<td><a href="https://www.example.com/file-1.pdf">https://www.example.com/file-1.pdf</a></td>
+</tr>
+<tr>
+<td>XYZ</td>
+<td>456</td>
+<td><a href="https://www.example.com/file-2.pdf">https://www.example.com/file-2.pdf</a></td>
+</tr>
+<tr>
+<td>LMN</td>
+<td>789</td>
+<td><a href="https://www.example.com/file-3.pdf">https://www.example.com/file-3.pdf</a></td>
+</tr>
+</tbody>
+</table>
+<p>How do you export the <code>url</code> column into a list of URLs? You just need to tell <code>to_csv</code> to only save the column you're interested in, and not to write any header or index information.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;urls.txt&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<p>Now you're all set to use <code>wget -i urls.txt</code>!</p>
 
               
 
@@ -747,6 +842,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../reshaping/transposing-data/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Transposing data in pandas (switching columns and rows)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Transposing data in pandas (switching columns and rows)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../graphs/" class="md-footer__link md-footer__link--next" aria-label="Next: Building graphs and charts" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Building graphs and charts
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
