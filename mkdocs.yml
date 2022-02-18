@@ -13,6 +13,7 @@ nav:
     - Reshaping long data to wide: reshaping/long-to-wide.ipynb
     - Reshaping wide data to long (tidy): reshaping/wide-to-long.ipynb
     - Transposing data: reshaping/transposing-data.ipynb
+    - Downloading many PDFs: pdfs/downloading-many-pdfs.md
   - Graphs:
     - graphs.md
     - Plotnine flipbook: graphs/plotnine-flipbook.ipynb
